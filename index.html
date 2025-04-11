@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/LOGO_OUTLINE.png" alt="logo">
+                </a>
+            </div><!--logo-->
+            <div class="language-selector">
+                <button class="language-btn" data-lang="en">EN</button>
+                <button class="language-btn" data-lang="pt">PT</button>
+                <button class="language-btn" data-lang="es">ES</button>
+            </div><!--language-selector-->
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#home" data-i18n="home">Home</a></li>
+                    <li><a href="#about" data-i18n="about">About</a></li>
+                    <li><a href="#speciality" data-i18n="speciality">Speciality</a></li>
+                    <li><a href="#projects" data-i18n="projects">Projects</a></li>
+                    <li><a href="#portfolio" data-i18n="portfolio">Portfolio</a></li>
+                    <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                </ul>
+            </nav><!--menu-desktop--> 
+            <div class="btn-contact">
+                <a href="#contact">
+                    <button>Contact</button>
+                </a>
+            </div><!--btn-contact -->  
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+            
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+                <div class="language-selector">
+                    <button class="language-btn" data-lang="en">EN</button>
+                    <button class="language-btn" data-lang="pt">PT</button>
+                    <button class="language-btn" data-lang="es">ES</button>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#home" data-i18n="home">Home</a></li>
+                        <li><a href="#about" data-i18n="about">About</a></li>
+                        <li><a href="#speciality" data-i18n="speciality">Speciality</a></li>
+                        <li><a href="#projects" data-i18n="projects">Projects</a></li>
+                        <li><a href="#portfolio" data-i18n="portfolio">Portfolio</a></li>
+                        <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div><!--menu-mobile-->
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div><!--interface-->
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="introduction">
+                <div class="interface">
+                    <div class="flex">
+                        <div class="text-intro">
+                            <h1 data-i18n="title">TRANSFORMING IDEAS INTO DIGITAL REALITY.</h1>
+                                <p data-i18n="intro1">Creativity and innovation go hand in hand...</p>
+                                <p data-i18n="intro2">My name is <strong>Albert</strong>...</p>
+                                <div class="btn-contact">
+                                    <a href="#contact">
+                                        <button data-i18n="linkUp">Link up</button>
+                                    </a>
+                            </div><!--btn-contact -->  
+                        </div><!--text-intro-->
+                        <div class="img-intro">
+                            <img src="images/jo.jpg" alt="Albert Johnson">
+                        </div><!--img-intro-->
+                    </div><!--flex-->
+                </div><!--interface-->
+            </div><!--introduction-->
+        </section><!--home-->
+
+        <section class="Speciality" id="speciality">
+            <div class="interface">
+                <h2 class="title">MY <span>SPECIALITIES.</span></h2>
+                <div class="flex-Speciality">
+                    <div class="Speciality-card">
+                        <i class="bi bi-code-square"></i>
+                        <h3>Web Design</h3>
+                        <p>Creating visually appealing and user-friendly websites that enhance the user experience.</p>
+                    </div><!--especiality-card-->
+
+                    <div class="Speciality-card">
+                        <i class="bi bi-cart"></i>
+                        <h3>Web Development</h3>
+                        <p>Building robust and scalable web applications using the latest technologies and frameworks.</p>
+                    </div><!--especiality-card-->
+
+                    <div class="Speciality-card">
+                        <i class="bi bi-wordpress"></i>
+                        <h3>SEO Optimization</h3>
+                        <p>Improving website visibility and ranking on search engines through effective SEO strategies.</p>
+                    </div><!--especiality-card-->
+                </div><!--flex-especiality-->
+            </div><!--interface-->
+        </section><!--Speciality-->
+
+        <section class="about" id="about">
+            <div class="interface">
+                <div class="flex">
+                    <div class="img-about">
+                        <img src="images/IMG-20250410-WA0056.jpg" alt="About Albert">
+                    </div>
+                    <div class="text-about">
+                        <h2 class="title">ABOUT <span>ME.</span></h2>
+                        <p>As a web developer, I am passionate about creating websites that are not only visually appealing but also user-friendly and optimized for performance. I have a strong foundation in HTML, CSS, and JavaScript, and I am constantly learning new technologies and frameworks to stay up-to-date with the latest trends in web development.</p>
+                        <p>I believe that a website should be a reflection of the brand it represents, and I work closely with my clients to understand their vision and goals. My attention to detail and commitment to quality ensure that every project I undertake is completed to the highest standard.</p>
+                        <div class="btn-contact">
+                            <a href="https://instagram.com/Albert__Johnson_">
+                                <button><i class="bi bi-instagram"></i></button>
+                            </a>
+                            <a href="https://linkedin.com/in/AlbertJohnsonOfori">
+                                <button><i class="bi bi-linkedin"></i></button>
+                            </a>
+                            <a href="https://github.com/AlbertJohnson994">
+                                <button><i class="bi bi-github"></i></button>
+                            </a>
+                            <a href="https://x.com/albertjohn12221?s=21">
+                                <button><i class="bi bi-twitter-x"></i></button>
+                            </a>
+                            <a href="https://facebook.com/albert.o.johnson.12">
+                                <button><i class="bi bi-facebook"></i></button>
+                            </a>
+                            <a href="#">
+                                <button><i class="bi bi-whatsapp"></i></button>
+                            </a>
+                        </div><!--btn-contact -->
+                    </div>
+                </div>
+            </div>
+        </section><!--about-->
+
+        <section class="Projects" id="projects">
+            <div class="interface">
+                <h2 class="title">MY <span>PROJECTS.</span></h2>
+                <div class="flex-projects">
+                    <div class="projects-card">
+                        <div class="btn-contact">
+                        <img src="images/countD.png" alt="Countdown Timer Project">
+                        <h3>Countdown Timer</h3>
+                        <a href="https://countdown-timer-chi-five.vercel.app/">
+                            <button type="submit">Visit</button>
+                        </a>
+                    </div>
+                    </div><!--projects-card-->
+
+                    <div class="projects-card">
+                        <div class="btn-contact">
+                        <img src="images/res.png" alt="Restaurant Website Project">
+                        <h3>Restaurant Website</h3>
+                        <a href="https://site-de-restaurante-nu.vercel.app/">
+                            <button type="submit">Visit</button>
+                        </a>
+                    </div>
+                    </div><!--projects-card-->
+
+                    <div class="projects-card">
+                        <div class="btn-contact">
+                        <img src="images/dis.png" alt="Disney+ Clone Project">
+                        <h3>Disney+ Clone</h3>
+                        <a href="https://clone-disneyplus-lxgn.vercel.app/">
+                            <button type="submit">Visit</button>
+                        </a>
+                        </div>
+                    </div><!--projects-card-->
+                </div><!--flex-projects-->
+            </div>
+        </section><!--Projects-->
+
+        <section class="Portfolio" id="portfolio">
+            <div class="interface">
+                <h2 class="title">MY <span>PORTFOLIO</span></h2>
+                <div class="flex">
+                    <div class="img-port" style="background-image: url(images/cdt.jpg);">
+                        <div class="overlay">Countdown Timer</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(images/restaurant.jpg);">
+                        <div class="overlay">Restaurant Website</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(images/dysney.jpg);">
+                        <div class="overlay">Disney+ Clone</div>
+                    </div>
+                </div>
+            </div>
+        </section><!--Portfolio-->
+        
+        <section class="form" id="contact">
+            <div class="interface">
+                <h2 class="title">CONTACT <span>ME</span></h2>
+                <div class="flex">
+                    <div class="form-contact">
+                        <form action="https://formsubmit.co/albert.johnson994@gmail.com" method="POST">
+                            <input type="text" name="name" placeholder="Name" required>
+                            <input type="tel" name="phone" placeholder="Phone" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://yourdomain.com/thanks.html">
+                            <button type="submit">Send</button>
+                        </form>
+                    </div><!--form-contact-->
+                    <div class="img-form">
+                        <img src="images/LOGOFILLED.png" alt="Contact Logo">
+                    </div><!--img-form-->
+                </div>
+            </div>
+        </section><!--form-->        
+    </main>
+    <footer>
+        <div class="interface">
+            <div class="flex-footer">
+                <div class="logo-footer">
+                    <img src="images/LOGO_OUTLINE.png" alt="Footer Logo">
+                </div><!--logo-footer-->
+                <div class="text-footer" style="font-family: 'Lobster', sans-serif;">
+                    <p data-i18n="copyright">&copy;2025 Albert Johnson Technology. All rights reserved.</p>
+                </div><!--text-footer-->
+            </div><!--flex-footer-->
+        </div><!--interface-->
+    </footer><!--footer-->
+
+    <script src="script.js"></script>
+</body>
+</html>
