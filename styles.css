@@ -568,18 +568,17 @@ section.form .flex {
 
 .img-form img {
     width: 300px;
-    border-radius: 20px;
+    border-radius: 100%;
     animation: flutuar 2s ease-in-out alternate infinite;
     position: relative;
 }
 
 /* Footer Section */
-footer {
+.footer {
     background-color: #000;
     padding: 40px 4%;
     border-top: 2px solid #f2cd00;
     font-family: "Lobster", sans-serif;
-    justify-content: center;
 }
 
 .footer .flex-footer {
@@ -588,18 +587,31 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer .logo-footer img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
 }
 
 .footer .text-footer p {
     color: #f2cd00;
-    font-size: 14px;
+    font-size: clamp(12px, 2vw, 14px);
     text-align: center;
-    font-family: 'Lobster', sans-serif;
+}
+
+@media (max-width: 600px) {
+    .footer .flex-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer .logo-footer {
+        margin-bottom: 15px;
+    }
 }
 
 /* Responsive Design */

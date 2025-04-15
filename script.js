@@ -25,6 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
             projectsTitle: "MY <span>PROJECTS.</span>",
             portfolioTitle: "MY <span>PORTFOLIO</span>",
             contactTitle: "CONTACT <span>ME</span>",
+            formName: "Name",
+            formPhone: "Phone",
+            formEmail: "Email",
+            formMessage: "Message",
+            send: "Send",
             copyright: "&copy;2025 Albert Johnson Technology. All rights reserved."
         },
         pt: {
@@ -51,6 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
             projectsTitle: "MEUS <span>PROJETOS.</span>",
             portfolioTitle: "MEU <span>PORTFÓLIO</span>",
             contactTitle: "ENTRE EM <span>CONTATO</span>",
+            formName: "Nome",
+            formPhone: "Telefone",
+            formEmail: "Email",
+            formMessage: "Mensagem",
+            send: "Enviar",
             copyright: "&copy;2025 Albert Johnson Technology. Todos os direitos reservados."
         },
         es: {
@@ -77,6 +87,11 @@ document.addEventListener('DOMContentLoaded', function() {
             projectsTitle: "MIS <span>PROYECTOS.</span>",
             portfolioTitle: "MI <span>PORTAFOLIO</span>",
             contactTitle: "CONTÁC<span>TAME</span>",
+            formName: "Nombre",
+            formPhone: "Teléfono",
+            formEmail: "Correo electrónico",
+            formMessage: "Mensaje",
+            send: "Enviar",
             copyright: "&copy;2025 Albert Johnson Technology. Todos los derechos reservados."
         }
     };
@@ -86,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Set all language buttons to inactive
         document.querySelectorAll('.language-btn').forEach(btn => {
             btn.classList.remove('active');
+            if (btn.dataset.lang === lang) btn.classList.add('active');
         });
         
         // Set current language button to active
@@ -94,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
             activeBtn.classList.add('active');
         }
         
-        // Get all elements with data-i18n attribute
+       //Get all elements with data-i18n attribute
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');
             if (translations[lang] && translations[lang][key]) {
@@ -103,6 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     element.innerHTML = translations[lang][key];
                 }
+            } else {
+                console.warn(`Missing translation for key: "${key}" in "${lang}"`);
             }
         });
         
