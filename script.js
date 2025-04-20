@@ -2,10 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Language translation object
     const translations = {
         en: {
+            alert: 'Please fill out all fields.',
             home: "Home",
             about: "About",
             speciality: "Speciality",
             projects: "Projects",
+            visit: "Visit",
             portfolio: "Portfolio",
             contact: "Contact",
             title: "TRANSFORMING IDEAS INTO DIGITAL REALITY",
@@ -30,13 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
             formEmail: "Email",
             formMessage: "Message",
             send: "Send",
+            sendWhatsApp: "Send WhatsApp",
             copyright: "&copy;2025 Albert Johnson Technology. All rights reserved."
         },
         pt: {
+            alert: 'Por favor, preencha todos os campos.',
             home: "Início",
             about: "Sobre",
             speciality: "Especialidade",
             projects: "Projetos",
+            visit: "Visitar",
             portfolio: "Portfólio",
             contact: "Contato",
             title: "TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL",
@@ -61,13 +66,16 @@ document.addEventListener('DOMContentLoaded', function() {
             formEmail: "Email",
             formMessage: "Mensagem",
             send: "Enviar",
+            sendWhatsApp: 'Enviar para o WhatsApp',
             copyright: "&copy;2025 Albert Johnson Technology. Todos os direitos reservados."
         },
         es: {
+            alert: 'Por favor, complete todos los campos.',
             home: "Inicio",
             about: "Sobre mí",
             speciality: "Especialidad",
             projects: "Proyectos",
+            visit: "Visitar",
             portfolio: "Portafolio",
             contact: "Contacto",
             title: "TRANSFORMANDO IDEAS EN REALIDAD DIGITAL",
@@ -92,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
             formEmail: "Correo electrónico",
             formMessage: "Mensaje",
             send: "Enviar",
+            sendWhatsApp: 'Enviar por WhatsApp',
             copyright: "&copy;2025 Albert Johnson Technology. Todos los derechos reservados."
         }
     };
@@ -204,6 +213,28 @@ document.addEventListener('DOMContentLoaded', function() {
         setupMobileMenu();
         setupSmoothScrolling();
     }
+
+    document.getElementById('form-whatsapp').addEventListener('submit', function(e) {
+        e.preventDefault(); // Impede envio tradicional
+      
+        const nome = document.getElementById('nome').value.trim();
+        const telefone = document.getElementById('telefone').value.trim();
+        const mensagem = document.getElementById('mensagem').value.trim();
+      
+        if (!nome || !telefone || !mensagem) {
+          alert('Por favor, preencha todos os campos.');
+          return;
+        }
+      
+        const texto = `Olá! Me chamo ${nome}, meu telefone é ${telefone} e minha mensagem é: ${mensagem}`;
+        const msgFormat = encodeURIComponent(texto);
+      
+        // Substitua com seu número do WhatsApp no formato internacional
+        const url = `https://api.whatsapp.com/send?phone=5531975057303&text=${msgFormat}`;
+      
+        window.open(url, '_blank');
+      });
+      
 
     // Start the application
     init();
